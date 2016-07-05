@@ -1,0 +1,21 @@
+
+@media print {
+  
+  div.page {
+    page-break-after: always;
+  }
+
+  @page :first {
+    margin: 10cm 2cm;
+  }
+
+  @page {
+    margin: 1cm;
+  }
+
+  h1 {
+    align: center;
+    text-align: center;
+  }
+
+}
