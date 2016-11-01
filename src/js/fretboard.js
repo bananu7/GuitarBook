@@ -36,6 +36,9 @@ function createFretboardImage(fretboardElem) {
     var endFret = $(fretboardElem).attr('end') || 12;
     var fretCount = endFret - startFret;
 
+    // Set up sizing and positioning
+    ctx.translate(10, 0);
+
     // Draw strings
     for (var string = 0; string < 6; string++) {
         var stringY = fretHeight * (string + 1);
