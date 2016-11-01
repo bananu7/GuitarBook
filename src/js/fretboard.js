@@ -7,7 +7,7 @@ function renderFretboards(pageElement) {
 }
 
 function createFretboardImage(fretboardElem) {
-    function drawDot(fret, string, ctx){
+    function drawDot(fret, string, text, ctx){
         var dotX = fret * fretWidth;
         // subtract half of fret width to put it in the middle
         if (fret != 0) {
@@ -16,9 +16,15 @@ function createFretboardImage(fretboardElem) {
 
         var dotY = string * fretHeight;
 
+        ctx.fillStyle = 'black';
         ctx.beginPath();
         ctx.arc(dotX, dotY, dotSize, 0, 2 * Math.PI, true);
         ctx.fill();
+
+        // draw the marker text     
+        ctx.fillStyle = 'white';
+        ctx.font = '8px sans-serif';
+        ctx.fillText(text, dotX - dotSize * 0.5, dotY + dotSize * 0.5);
     }
 
     // drawing constants
@@ -28,8 +34,12 @@ function createFretboardImage(fretboardElem) {
 
     // rendering boilerplate
     var cvs = document.createElement('canvas');
-    cvs.width = 2000;
+    cvs.width = 4000;
+    cvs.height = 1000;
+    cvs.style.width  = '1000px';
+    cvs.style.height  = '250px';
     var ctx = cvs.getContext('2d');
+    ctx.fillStyle = 'black';
 
     // diagram data
     var startFret = $(fretboardElem).attr('start') || 0;
@@ -38,6 +48,7 @@ function createFretboardImage(fretboardElem) {
 
     // Set up sizing and positioning
     ctx.translate(10, 0);
+    ctx.scale(4, 4);
 
     // Draw strings
     for (var string = 0; string < 6; string++) {
@@ -55,11 +66,12 @@ function createFretboardImage(fretboardElem) {
         ctx.stroke();
     }
 
-    // Draw dots
+    // Draw markers
     $(fretboardElem).children('dot').each(function() {
         var fret = $(this).attr('fret');
         var string = $(this).attr('string');
-        drawDot(fret, string, ctx);
+        var text = $(this).text();
+        drawDot(fret, string, text, ctx);
         console.log('dot at fret ' + fret + ' and string ' + string);
     });
 

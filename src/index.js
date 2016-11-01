@@ -15,5 +15,7 @@ function processPageData(pageElement) {
 
 function go() {
     ['pages/intervals.html'
-    ,'pages/fretboard.html'].forEach(addPage);
+    ,'pages/fretboard.html'
+    ,'pages/chords.html'
+    ].forEach(addPage);
 }
