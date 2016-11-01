@@ -10,9 +10,7 @@ function addPage(url) {
 
 // TEMP TODO
 function processPageData(pageElement) {
-    $(pageElement).find('fretboard').replaceWith(function(f) {
-        return $('<span>fretboard diagram</span>');
-    });
+    renderFretboards(pageElement);
 }
 
 function go() {
