@@ -28,17 +28,17 @@
 
   /* page structure */
 
-  .section {
+  section {
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
   }
 
-  .section div, .section table {
+  section div, section table {
     flex-basis: auto;
   }
 
-  .section .big {
+  section .big {
     width: 100%;
     flex-basis: 100%;
   }
