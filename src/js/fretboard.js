@@ -14,7 +14,7 @@ function createFretboardImage(fretboardElem) {
             dotX -= (fretWidth * 0.5);
         }
 
-        var dotY = string * fretHeight;
+        const dotY = string * fretHeight;
 
         ctx.fillStyle = 'black';
         ctx.beginPath();
@@ -28,30 +28,30 @@ function createFretboardImage(fretboardElem) {
     }
 
     // drawing constants
-    var fretWidth = 50;
-    var fretHeight = 10;
-    var dotSize = 5;
+    const fretWidth = 50;
+    const fretHeight = 10;
+    const dotSize = 5;
 
     // diagram data
-    var startFret = $(fretboardElem).attr('start') || 0;
-    var endFret = $(fretboardElem).attr('end') || 12;
-    var fretCount = endFret - startFret;
+    const startFret = $(fretboardElem).attr('start') || 0;
+    const endFret = $(fretboardElem).attr('end') || 12;
+    const fretCount = endFret - startFret;
 
     // rendering boilerplate
     const boardPixelDensity = 100; // pixels / cm
 
     const fretWidthInCm = 1.5;
     const fretHeightInCm = 0.5;
-    const boardWidth = fretWidthInCm * fretCount + 3;
+    const boardWidth = fretWidthInCm * fretCount + 1;
     const boardHeight = fretHeightInCm * 6;
 
-    var cvs = document.createElement('canvas');
+    const cvs = document.createElement('canvas');
     cvs.width = boardWidth * boardPixelDensity;
     cvs.height = boardHeight * boardPixelDensity;
     cvs.style.width  = boardWidth + 'cm';
     cvs.style.height  = boardHeight + 'cm';
 
-    var ctx = cvs.getContext('2d');
+    const ctx = cvs.getContext('2d');
     ctx.fillStyle = 'black';
 
     // Set up sizing and positioning
