@@ -32,19 +32,27 @@ function createFretboardImage(fretboardElem) {
     var fretHeight = 10;
     var dotSize = 5;
 
-    // rendering boilerplate
-    var cvs = document.createElement('canvas');
-    cvs.width = 4000;
-    cvs.height = 1000;
-    cvs.style.width  = '1000px';
-    cvs.style.height  = '250px';
-    var ctx = cvs.getContext('2d');
-    ctx.fillStyle = 'black';
-
     // diagram data
     var startFret = $(fretboardElem).attr('start') || 0;
     var endFret = $(fretboardElem).attr('end') || 12;
     var fretCount = endFret - startFret;
+
+    // rendering boilerplate
+    const boardPixelDensity = 100; // pixels / cm
+
+    const fretWidthInCm = 1.5;
+    const fretHeightInCm = 0.5;
+    const boardWidth = fretWidthInCm * fretCount + 3;
+    const boardHeight = fretHeightInCm * 6;
+
+    var cvs = document.createElement('canvas');
+    cvs.width = boardWidth * boardPixelDensity;
+    cvs.height = boardHeight * boardPixelDensity;
+    cvs.style.width  = boardWidth + 'cm';
+    cvs.style.height  = boardHeight + 'cm';
+
+    var ctx = cvs.getContext('2d');
+    ctx.fillStyle = 'black';
 
     // Set up sizing and positioning
     ctx.translate(10, 0);
