@@ -42,7 +42,7 @@ function createFretboardImage(fretboardElem) {
 
     const fretWidthInCm = 1.5;
     const fretHeightInCm = 0.5;
-    const boardWidth = fretWidthInCm * fretCount + 1;
+    const boardWidth = fretWidthInCm * (fretCount + 2);
     const boardHeight = fretHeightInCm * 6;
 
     const cvs = document.createElement('canvas');
@@ -76,11 +76,14 @@ function createFretboardImage(fretboardElem) {
 
     // Draw markers
     $(fretboardElem).children('dot').each(function() {
-        var fret = $(this).attr('fret');
-        var string = $(this).attr('string');
+        var fret = Number($(this).attr('fret'));
+        var string = Number($(this).attr('string'));
         var text = $(this).text();
+
+        if (!text) text = getNoteAt(string, fret);
+
         drawDot(fret, string, text, ctx);
-        console.log('dot at fret ' + fret + ' and string ' + string);
+        // console.log('dot at fret ' + fret + ' and string ' + string + ', note ' + text + " " + getNoteAt(string, fret));
     });
 
     return cvs;
