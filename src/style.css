@@ -5,7 +5,24 @@
   width: 100%;
 }
 
-@media print {
+/* Just for easy preview in the browser */
+@media screen {
+  div.page {
+    width: 210mm;
+    height: 297mm;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 5px #888;
+    background-color: white;
+    padding: 10mm;
+  }
+
+  body {
+    background-color: #999;
+  }
+}
+
+/*@media print {*/
   /* document structure */
   html, body {
     width: 210mm;
@@ -48,10 +65,15 @@
   div {
     box-sizing: border-box;
   }
+
   table {
     border-collapse: collapse;
     margin-right: 0;
     page-break-inside : avoid;
+  }
+
+  td {
+    padding: 2mm;
   }
 
   thead {
@@ -64,4 +86,9 @@
     border-right: 1px solid black;
   }
 
-}
+  span.bubble, .bubble-list > span {
+    border-radius: 2mm;
+    background-color: #ccc;
+    padding: 1.5mm;
+  }
+/* } media print */
