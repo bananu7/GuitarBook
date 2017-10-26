@@ -14,11 +14,12 @@
 
   body {
     margin: 0;
-    padding: 0;
+    padding: 10mm;
   }
 
   div.page {
     page-break-after: always;
+    border-bottom: 2px dotted black;
   }
 
   h1 {
@@ -38,7 +39,7 @@
     flex-basis: auto;
   }
 
-  section .big {
+  .big {
     width: 100%;
     flex-basis: 100%;
   }
@@ -55,6 +56,7 @@
 
   thead {
     border-bottom: 1mm solid black;
+    display: table-row-group;
   }
 
   table.border-vert td, table.border-vert th {
