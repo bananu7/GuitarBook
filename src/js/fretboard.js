@@ -23,14 +23,9 @@ function createFretboardImage(fretboardElem) {
 
         // draw the marker text     
         ctx.fillStyle = 'white';
-        ctx.font = '8px sans-serif';
+        ctx.font = '32px sans-serif';
         ctx.fillText(text, dotX - dotSize * 0.5, dotY + dotSize * 0.5);
     }
-
-    // drawing constants
-    const fretWidth = 50;
-    const fretHeight = 10;
-    const dotSize = 5;
 
     // diagram data
     const startFret = $(fretboardElem).attr('start') || 0;
@@ -43,7 +38,7 @@ function createFretboardImage(fretboardElem) {
     const fretWidthInCm = 1.5;
     const fretHeightInCm = 0.5;
     const boardWidth = fretWidthInCm * (fretCount + 2);
-    const boardHeight = fretHeightInCm * 6;
+    const boardHeight = fretHeightInCm * (6 + 1);
 
     const cvs = document.createElement('canvas');
     cvs.width = boardWidth * boardPixelDensity;
@@ -54,9 +49,14 @@ function createFretboardImage(fretboardElem) {
     const ctx = cvs.getContext('2d');
     ctx.fillStyle = 'black';
 
+    // drawing constants
+    const fretWidth = fretWidthInCm * boardPixelDensity;
+    const fretHeight = fretHeightInCm * boardPixelDensity;
+    const dotSize = fretHeight / 2;
+
     // Set up sizing and positioning
-    ctx.translate(10, 0);
-    ctx.scale(4, 4);
+    ctx.translate(fretWidth / 2, 0);
+    ctx.scale(1, 1);
 
     // Draw strings
     for (var string = 0; string < 6; string++) {
