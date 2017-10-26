@@ -28,8 +28,8 @@ function createFretboardImage(fretboardElem) {
     }
 
     // diagram data
-    const startFret = $(fretboardElem).attr('start') || 0;
-    const endFret = $(fretboardElem).attr('end') || 12;
+    const startFret = Number($(fretboardElem).attr('start') || 0);
+    const endFret = Number($(fretboardElem).attr('end') || 12);
     const fretCount = endFret - startFret;
 
     // rendering boilerplate
@@ -71,6 +71,11 @@ function createFretboardImage(fretboardElem) {
         var fretX = fretWidth * fret;
         ctx.moveTo(fretX, fretHeight);
         ctx.lineTo(fretX, fretHeight * 6);
+        ctx.stroke();
+    }
+    if (startFret == 0) {
+        ctx.moveTo(fretWidth / 20, fretHeight);
+        ctx.lineTo(fretWidth / 20, fretHeight * 6);
         ctx.stroke();
     }
 
