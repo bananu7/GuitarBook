@@ -86,6 +86,11 @@
     border-right: 1px solid black;
   }
 
+  table.all-borders td, table.all-borders th {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
   span.bubble, .bubble-list > span {
     border-radius: 2mm;
     background-color: #ccc;
