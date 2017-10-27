@@ -17,5 +17,6 @@ function go() {
     ['pages/intervals.html'
     ,'pages/fretboard.html'
     ,'pages/chords.html'
+    ,'pages/scales.html'
     ].forEach(addPage);
 }
