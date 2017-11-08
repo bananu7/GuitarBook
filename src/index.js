@@ -11,6 +11,7 @@ function addPage(url) {
 // TEMP TODO
 function processPageData(pageElement) {
     renderFretboards(pageElement);
+    renderIntervalBlocks(pageElement);
 }
 
 function go() {
@@ -18,5 +19,6 @@ function go() {
     ,'pages/fretboard.html'
     ,'pages/chords.html'
     ,'pages/scales.html'
+    ,'pages/songs.html'
     ].forEach(addPage);
 }

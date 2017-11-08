@@ -96,4 +96,24 @@
     background-color: #ccc;
     padding: 1.5mm;
   }
+
+  /* interval list on scales page */
+  div.interval-list {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  div.interval-list span {
+    height: 5mm;
+    display: inline-grid;
+    border-right: 0.3mm solid black;
+  }
+  div.interval-list span.s {
+    width: 5mm;
+    background-color: #999;
+  }
+  div.interval-list span.t {
+    width: 10mm;
+    background-color: #ccc;
+  }
 /* } media print */
