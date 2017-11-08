@@ -1,147 +1,13 @@
 <div class="page">
-  <h2>Modes with consecutive intervals</h2>
-
-  <style>
-    /* interval list on scales page */
-    div.interval-list {
-      width: 100%;
-      height: 100%;
-      margin: auto;
-    }
-    div.interval-list span {
-      height: 5mm;
-      display: inline-grid;
-      border-right: 0.3mm solid black;
-      text-align: right;
-      padding-right: 0.5mm;
-    }
-    div.interval-list span.s {
-      width: 5mm;
-      background-color: #999;
-    }
-    div.interval-list span.t {
-      width: 10mm;
-      background-color: #ccc;
-    }
-  </style>
-
-  <table style="width: 100%;">
-    <thead>
-      <th>#</th>
-      <th>Name</th>
-      <th>Intervals</th>
-    </thead>
-    <tbody>
-      <tr>
-        <td>I</td>
-        <td>Ionian</td>
-        <td><intervals>ttsttts</intervals></td>
-      </tr>
-      <tr>
-        <td>II</td>
-        <td>Dorian</td>
-        <td><intervals>tstttst</intervals></td>
-      </tr>
-      <tr>
-        <td>III</td>
-        <td>Phrygian</td>
-        <td><intervals>stttstt</intervals></td>
-      </tr>
-      <tr>
-        <td>IV</td>
-        <td>Lydian</td>
-        <td><intervals>tttstts</intervals></td>
-      </tr>
-      <tr>
-        <td>V</td>
-        <td>Mixolydian</td>
-        <td><intervals>ttsttst</intervals></td>
-      </tr>
-      <tr>
-        <td>VI</td>
-        <td>Aeolian</td>
-        <td><intervals>tsttstt</intervals></td>
-      </tr>
-      <tr>
-        <td>VII</td>
-        <td>Locrian</td>
-        <td><intervals>sttsttt</intervals></td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>Modes with intervals from the tonic</h2>
-  <table class="all-borders" style="text-align: center">
-    <tbody>
-    <tr>
-      <th rowspan="2">Mode</th>
-      <th rowspan="2">White<br>
-      note</th>
-      <th colspan="8">Intervals with respect to the tonic</th>
-    </tr>
-    <tr>
-      <th style="width: 5em">prime</th>
-      <th style="width: 5em">second</th>
-      <th style="width: 5em">third</th>
-      <th style="width: 5em">fourth</th>
-      <th style="width: 5em">fifth</th>
-      <th style="width: 5em">sixth</th>
-      <th style="width: 5em">seventh</th>
-      <th style="width: 5em">octave</th>
-    </tr>
-    <tr>
-      <th style="text-align: left">Lydian</th>
-      <td>F</td>
-      <td rowspan="7">perfect</td>
-      <td rowspan="5">major</td>
-      <td rowspan="3">major</td>
-      <td rowspan="1">augmented</td>
-      <td rowspan="6">perfect</td>
-      <td rowspan="4">major</td>
-      <td rowspan="2">major</td>
-      <td rowspan="7">perfect</td>
-    </tr>
-    <tr>
-      <th style="text-align: left">Ionian</th>
-      <td>C</td>
-      <td rowspan="6">perfect</td>
-    </tr>
-    <tr>
-      <th style="text-align: left">Mixolydian</th>
-      <td>G</td>
-      <td rowspan="5">minor</td>
-    </tr>
-    <tr>
-      <th style="text-align: left">Dorian</th>
-      <td>D</td>
-      <td rowspan="4">minor</td>
-    </tr>
-    <tr>
-      <th style="text-align: left">Aeolian</th>
-      <td>A</td>
-      <td rowspan="3">minor</td>
-    </tr>
-    <tr>
-      <th style="text-align: left">Phrygian</th>
-      <td>E</td>
-      <td rowspan="2">minor</td>
-    </tr>
-    <tr>
-      <th style="text-align: left">Locrian</th>
-      <td>B</td>
-      <td rowspan="1">diminished</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
-
-<div class="page">
   <h2>Major scales</h2>
   <p>The enharmonic scales have been selected basing on common use.</p>
 
   <style>
-    table.narrow-rows td { padding-top: : 0; padding-bottom: 0; }
-
+    table.narrow-rows td { 
+      padding-top: : 0;
+      padding-bottom: 0;
+      border-bottom: 0.3mm solid black;
+    }
   </style>
 
   <table class="narrow-rows">
@@ -154,6 +20,7 @@
       <th>6</th>
       <th>7</th>
       <th>8</th>
+      <th>Rel. minor</th>
     </thead>
     <tbody>
       <tr>
@@ -165,6 +32,8 @@
         <td>A</td>
         <td>B</td>
         <td>C</td>
+
+        <td>a</td>
       </tr>
       <tr>
         <td>C♯</td>
@@ -185,6 +54,8 @@
         <td>B</td>
         <td>C♯</td>
         <td>D</td>
+
+        <td>b</td>
       </tr>
       <tr>
         <td>E♭</td>
@@ -195,6 +66,8 @@
         <td>C</td>
         <td>D</td>
         <td>E♭</td>
+
+        <td>c</td>
       </tr>
       <tr>
         <td>E</td>
@@ -205,6 +78,8 @@
         <td>C♯</td>
         <td>D♯</td>
         <td>E</td>
+
+        <td>c♯</td>
       </tr>
         <td>F</td>
         <td>G</td>
@@ -214,6 +89,20 @@
         <td>D</td>
         <td>E</td>
         <td>F</td>
+
+        <td>d</td>
+      <tr>
+      </tr>
+        <td>G</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F♯</td>
+        <td>G</td>
+
+        <td>e</td>
       <tr>
       </tr>
     </tbody>

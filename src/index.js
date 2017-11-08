@@ -20,6 +20,7 @@ function go() {
     var pages = ['pages/intervals.html'
     ,'pages/chords.html'
     ,'pages/scales.html'
+    ,'pages/modes.html'
     ,'pages/songs.html'
     ].map(loadPage);
 
