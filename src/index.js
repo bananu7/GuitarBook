@@ -1,11 +1,13 @@
 'use strict';
 
-function addPage(url) {
-    $.get(url, function (data) {
-        var page = $(data);
-        processPageData(page);
-        $(document.body).append(page);
-    });
+function loadPage(url) {
+    return fetch(url).then(response => response.text());
+}
+
+function addPage(pageText) {
+    var page = $(pageText);
+    processPageData(page);
+    $(document.body).append(page);
 }
 
 // TEMP TODO
@@ -15,10 +17,11 @@ function processPageData(pageElement) {
 }
 
 function go() {
-    ['pages/intervals.html'
-    ,'pages/fretboard.html'
+    var pages = ['pages/intervals.html'
     ,'pages/chords.html'
     ,'pages/scales.html'
     ,'pages/songs.html'
-    ].forEach(addPage);
+    ].map(loadPage);
+
+    Promise.all(pages).then(pages => pages.forEach(addPage));
 }
