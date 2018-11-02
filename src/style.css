@@ -96,4 +96,15 @@
     background-color: #ccc;
     padding: 1.5mm;
   }
+
+  .song-structure {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div.song-structure div {
+    border: 1px solid green;
+    overflow: hidden;
+    display : block;
+  }
 /* } media print */
