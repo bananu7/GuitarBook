@@ -114,5 +114,11 @@
 
     max-height: 18mm;
     flex-basis: calc(1em * var(--len));
+    background-image: repeating-linear-gradient(
+      to right, 
+      transparent,
+      transparent 0.9em,
+      #ccc 0.9em,
+      #ccc 1em);
   }
 /* } media print */

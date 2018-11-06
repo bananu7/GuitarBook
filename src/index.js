@@ -17,11 +17,14 @@ function processPageData(pageElement) {
 }
 
 function go() {
-    var pages = ['pages/intervals.html'
-    ,'pages/chords.html'
-    ,'pages/scales.html'
-    ,'pages/modes.html'
-    ,'songs/pretender.html'
+    var pages = [
+    // 'pages/toc.html'
+    //,'pages/intervals.html'
+    //,'pages/chords.html'
+    //,'pages/scales.html'
+    //,'pages/modes.html'
+    //,'songs/pretender.html'
+    ,'songs/kitn.html'
     ].map(loadPage);
 
     Promise.all(pages).then(pages => pages.forEach(addPage));
