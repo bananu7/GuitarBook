@@ -106,5 +106,12 @@
     border: 1px solid green;
     overflow: hidden;
     display : block;
+    padding: 3mm;
+
+    word-wrap: break-word;
+    line-height: 0.8;
+    text-transform: uppercase;
+
+    max-height: 18mm;
   }
 /* } media print */

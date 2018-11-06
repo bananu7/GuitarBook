@@ -21,7 +21,7 @@ function go() {
     ,'pages/chords.html'
     ,'pages/scales.html'
     ,'pages/modes.html'
-    ,'pages/songs.html'
+    ,'songs/pretender.html'
     ].map(loadPage);
 
     Promise.all(pages).then(pages => pages.forEach(addPage));
