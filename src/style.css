@@ -113,5 +113,6 @@
     text-transform: uppercase;
 
     max-height: 18mm;
+    flex-basis: calc(1em * var(--len));
   }
 /* } media print */
