@@ -24,7 +24,8 @@ function createFretboardImage(fretboardElem) {
         // draw the marker text     
         ctx.fillStyle = 'white';
         ctx.font = '32px sans-serif';
-        ctx.fillText(text, dotX - dotSize * 0.5, dotY + dotSize * 0.5);
+        ctx.textAlign = "center";
+        ctx.fillText(text, dotX, dotY + dotSize * 0.5);
     }
 
     // diagram data
