@@ -18,12 +18,11 @@ function processPageData(pageElement) {
 
 function go() {
     var pages = [
-    // 'pages/toc.html'
-    //,'pages/intervals.html'
-    //,'pages/chords.html'
-    //,'pages/scales.html'
-    //,'pages/modes.html'
-    //,'songs/pretender.html'
+     'pages/intervals.html'
+    ,'pages/chords.html'
+    ,'pages/scales.html'
+    ,'pages/scale_steps.html'
+    ,'pages/modes.html'
     ,'songs/kitn.html'
     ].map(loadPage);
 
