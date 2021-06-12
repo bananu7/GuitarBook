@@ -20,3 +20,9 @@ function createIntervalBlocks(elem) {
 
     return list;
 }
+
+function addFooter(pageElement, text) {
+    const v = $("<div class=version></div>");
+    v.text(text);
+    $(pageElement).append(v);
+}

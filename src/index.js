@@ -1,19 +1,25 @@
 'use strict';
 
+const version = "v0.1.2";
+
 function loadPage(url) {
     return fetch(url).then(response => response.text());
 }
 
-function addPage(pageText) {
+function addPage(pageText, i, pages) {
     var page = $(pageText);
-    processPageData(page);
+
+    const n = pages.length;
+    processPageData(page, i+1, n);
+
     $(document.body).append(page);
 }
 
 // TEMP TODO
-function processPageData(pageElement) {
+function processPageData(pageElement, i, n) {
     renderFretboards(pageElement);
     renderIntervalBlocks(pageElement);
+    addFooter(pageElement, "Chapter " + String(i) + "/" + String(n) + " " + version);
 }
 
 function go() {

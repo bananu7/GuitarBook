@@ -37,6 +37,7 @@
   div.page {
     page-break-after: always;
     border-bottom: 2px dotted black;
+    position: relative;
   }
 
   h1 {
@@ -120,5 +121,10 @@
       transparent 0.9em,
       #ccc 0.9em,
       #ccc 1em);
+  }
+
+  div.version {
+    position: absolute;
+    bottom: 10mm;
   }
 /* } media print */
