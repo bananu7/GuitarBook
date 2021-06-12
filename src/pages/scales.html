@@ -1,6 +1,6 @@
 <div class="page">
   <h2>Major scales</h2>
-  <p>The enharmonic scales have been selected basing on common use.</p>
+  <p>This corresponds to circle of fifths in a table form.</p>
 
   <style>
     table.narrow-rows tbody td {
@@ -12,20 +12,26 @@
     table.narrow-rows tfoot td {
       border-top: 1mm solid black;
     }
+
+    table tbody td.select {
+      background-color: #ccffcc;
+    }
+
+    table tbody tr.select {
+      background-color: #dddddd;
+    }
   </style>
 
   <table class="narrow-rows">
     <thead>
       <tr>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>Rel. minor</th>
+        <th>P1</th>
+        <th>M2</th>
+        <th>M3</th>
+        <th>P4</th>
+        <th>P5</th>
+        <th>M6</th>
+        <th>M7</th>
       </tr>
     </thead>
     <tfoot>
@@ -37,104 +43,136 @@
         <td>M</td>
         <td>m</td>
         <td>dim</td>
-        <td>M</td>
       </tr>
     </tfoot>
     <tbody>
       <tr>
-        <td>C</td>
-        <td>D</td>
-        <td>E</td>
-        <td>F</td>
-        <td>G</td>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-
-        <td>a</td>
-      </tr>
-      <tr>
-        <td>C♯</td>
-        <td>D♯</td>
-        <td>E♯</td>
-        <td>F♯</td>
-        <td>G♯</td>
-        <td>A♯</td>
-        <td>B♯</td>
-        <td>C♯</td>
-      </tr>
-      <tr>
-        <td>D</td>
-        <td>E</td>
-        <td>F♯</td>
-        <td>G</td>
-        <td>A</td>
-        <td>B</td>
-        <td>C♯</td>
-        <td>D</td>
-
-        <td>b</td>
-      </tr>
-      <tr>
+        <td>G♭</td>
+        <td>A♭</td>
+        <td>B♭</td>
+        <td class="select">C♭</td>
+        <td>D♭</td>
         <td>E♭</td>
         <td>F</td>
-        <td>G</td>
+      </tr>
+
+      <tr>
+        <td>D♭</td>
+        <td>E♭</td>
+        <td>F</td>
+        <td class="select">G♭</td>
         <td>A♭</td>
         <td>B♭</td>
         <td>C</td>
-        <td>D</td>
-        <td>E♭</td>
-
-        <td>c</td>
       </tr>
+
+      <tr>
+        <td>A♭</td>
+        <td>B♭</td>
+        <td>C</td>
+        <td class="select">D♭</td>
+        <td>E♭</td>
+        <td>F</td>
+        <td>G</td>
+      </tr>
+
+      <tr>
+        <td>E♭</td>
+        <td>F</td>
+        <td>G</td>
+        <td class="select">A♭</td>
+        <td>B♭</td>
+        <td>C</td>
+        <td>D</td>
+      </tr>
+
+      <tr>
+        <td>B♭</td>
+        <td>C</td>
+        <td>D</td>
+        <td class="select">E♭</td>
+        <td>F</td>
+        <td>G</td>
+        <td>A</td>
+      </tr>
+
+      <tr>
+        <td>F</td>
+        <td>G</td>
+        <td>A</td>
+        <td class="select">B♭</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+      </tr>
+      
+      <tr class="select">
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>G</td>
+        <td>A</td>
+        <td>B</td>
+      </tr>
+      <tr>
+        <td>G</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td class="select">F♯</td>
+      </tr>
+      <tr>
+        <td>D</td>
+        <td>E</td>
+        <td>F♯</td>
+        <td>G</td>
+        <td>A</td>
+        <td>B</td>
+        <td class="select">C♯</td>
+      </tr>
+       <tr>
+        <td>A</td>
+        <td>B</td>
+        <td>C♯</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F♯</td>
+        <td class="select">G♯</td>
+      </tr>
+
       <tr>
         <td>E</td>
         <td>F♯</td>
         <td>G♯</td>
         <td>A</td>
+        <td>B</td>
+        <td>C♯</td>
+        <td class="select">D♯</td>
+      </tr>
+
+      <tr>
         <td>B</td>
         <td>C♯</td>
         <td>D♯</td>
         <td>E</td>
-
-        <td>c♯</td>
-      </tr>
-      <tr>
-        <td>F</td>
-        <td>G</td>
-        <td>A</td>
-        <td>B♭</td>
-        <td>C</td>
-        <td>D</td>
-        <td>E</td>
-        <td>F</td>
-
-        <td>d</td>
-      </tr>
-      <tr>
-        <td>G</td>
-        <td>A</td>
-        <td>B</td>
-        <td>C</td>
-        <td>D</td>
-        <td>E</td>
-        <td>F♯</td>
-        <td>G</td>
-
-        <td>e</td>
-      </tr>
-      <tr>
-        <td>A</td>
-        <td>B</td>
-        <td>C♯</td>
-        <td>D</td>
-        <td>E</td>
         <td>F♯</td>
         <td>G♯</td>
-        <td>A</td>
-
-        <td>f♯</td>
+        <td class="select">A♯</td>
       </tr>
+
+      <tr>
+        <td>F♯</td>
+        <td>G♯</td>
+        <td>A♯</td>
+        <td>B</td>
+        <td>C♯</td>
+        <td>D♯</td>
+        <td class="select">E♯</td>
+      </tr>
+     
     </tbody>
   </table>
 
@@ -216,6 +254,8 @@
       </tr>
     </tbody>
   </table>
+</div>
+<div class="page">
 
   <h2>Harmonic scales</h2>
   Commonly used to build chords.
