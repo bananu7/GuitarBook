@@ -29,6 +29,7 @@ function go() {
     ,'pages/scales.html'
     ,'pages/scale_steps.html'
     ,'pages/modes.html'
+    ,'pages/passages.html'
     ,'songs/kitn.html'
     ].map(loadPage);
 
